@@ -1,0 +1,120 @@
+<div id="notification_section" >
+</div>
+
+<!--this is for adding new menu or table -->
+<div id="tableDesigner" style="display:none" class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 mt-3">      
+        <div class="card">
+            <div class="card-header">
+              Table Details
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="tablename">Name:</label>
+                <input type="text" class="form-control" id="tablename">
+              </div>
+              <div class="form-group">
+                <label for="tbldescription">Description:</label>
+                <input type="text" class="form-control" id="tbldescription">
+              </div>
+            </div>
+        </div>
+        <button id="save" type="button" class="btn btn-primary mt-3">Save</button>
+        <button id="add" type="button" class="btn btn-primary mt-3">Add</button>
+        <button id="edit" type="button" class="btn btn-primary mt-3">Edit</button>   
+        <button id="remove" type="button" class="btn btn-primary mt-3">Remove</button>
+    </div>
+    <div class="col-md-9 mt-3">
+      <div class="card">
+        <div class="card-header">Field Details</div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Field Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Type</th>
+              <th scope="col">Unique</th>
+              <th scope="col">Visible</th>
+              <th scope="col">Required</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr>
+              <th scope="row">1</th>
+              <td><input type="text" class="form-control" name="fieldname"/></td>
+              <td><input type="text" class="form-control" name="flddescription"/></td>
+              <td>               
+                  <select onchange="typechange(this)" class="form-control" name="fieldtype">
+                    <option>String</option>
+                    <option>Date</option>
+                    <option>Number</option>
+                    <option>List</option>
+                    <option>Lookup</option>
+                  </select>                
+                  <div id="list" style="display: none">
+                    <div id="listItem" class="form-group mt-3">
+                      <div>
+                        <label for="fieldlist">List Name:</label>
+                        <input type="text" value="" class="form-control" name="fieldlist">   
+                      </div>                       
+                    </div>
+                    <button id="addlist" type="button" class="btn btn-primary">Add</button>
+                     <button id="removelist" type="button" class="btn btn-primary">Remove</button>
+                  </div>
+              </td>
+              <td>
+                <select class="form-control" name="fieldunique">
+                  <option>No</option>
+                  <option>Yes</option>                       
+                </select>
+              </td>
+              <td>
+                <select class="form-control" name="fieldvisible">
+                  <option>Yes</option>
+                  <option>No</option>                       
+                </select>
+              </td>
+              <td><select class="form-control" name="fieldrequired">
+                    <option>Yes</option>
+                    <option>No</option>                       
+                  </select>
+              </td>         
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<!--this is for adding new item to database collection -->
+<div id="dynafield" style="display:none">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 mt-3">
+          <div class="card">
+              <div id="editfields" class="card-header">
+                Edit Fields
+              </div>
+              <div id="dynamic" class="card-body">
+                <!--<div class="form-group">
+                  <label for="dynaname">Name:</label>
+                  <input type="text" class="form-control" name="dynaname">
+                </div>  -->            
+              </div>
+          </div>
+          <button id="insertdata" type="button" class="btn btn-primary mt-3">Save</button>
+          <button id="querydata" type="button" class="btn btn-primary mt-3">Search</button>
+        </div>
+        <div class="col-md-9 mt-3">
+          <div id="result" style="display:none"></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
