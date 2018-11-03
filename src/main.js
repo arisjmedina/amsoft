@@ -36,6 +36,7 @@ tableView.prototype.createTable = function()
         tblBody.appendChild(bodyTR);
     }
 
+
     tbl.appendChild(tblBody);  
     return tbl;   
 }
@@ -118,6 +119,7 @@ save.addEventListener("click",function(){
     description: document.getElementById("tbldescription").value,
     fields: []
   }
+ 
   
   var names = document.getElementsByName("fieldname");
   var description = document.getElementsByName("flddescription");
